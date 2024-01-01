@@ -39,6 +39,6 @@ def printresults():
     print("--------Results--------")
     print(contentCombined)
     print(contentObj) # I'm gonna need this converted to JSON text
-    #You may want to check Jsonify from flask
+    #You may want to check Jsonify from flask > jsonify(contentObj) but we would need to setup a flask server
 
 printresults()
