@@ -38,9 +38,7 @@ def printresults():
     print(contentPages)
     print("--------Results--------")
     print(contentCombined)
-    print(jsonify(contentObj)) # i'm gonna need this converted to JSON text
+    print(contentObj) # I'm gonna need this converted to JSON text
     #You may want to check Jsonify from flask
 
 printresults()
-
-Flask.run(debug=True)
