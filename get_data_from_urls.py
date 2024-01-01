@@ -19,7 +19,7 @@ for url in urlsSplit:
     #considering Ucanet is mostly used by Windows 95 computers that ain't using Https
     doc = Document(response.content)
     title = doc.title()
-    summary = doc.summary
+    summary = doc.summary()
     contentTitles.append(title)
     contentPages.append(summary)
     contentCombined += (title + " " + summary + ",\n")
