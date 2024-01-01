@@ -33,5 +33,6 @@ def printresults():
     print("--------Results--------")
     print(contentCombined)
     print(contentObj) # i'm gonna need this converted to JSON text
+    #what do you mean with ^?
 
 printresults()
