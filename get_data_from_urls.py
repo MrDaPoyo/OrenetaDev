@@ -3,9 +3,9 @@ import requests
 from flask import Flask
 from readability.readability import Document
 import jsonify
-''' df = open("tools/url-list.txt") 
-
+'''df = open("tools/url-list.txt") 
 urls = df.read()'''
+
 urls = "wikipedia.com neal.fun dapoyo.neocities.org theoldnet.com 12thman.com"
 urlsSplit =  urls.split(" ") # each url is split by whatever character is in here
 
