@@ -1,6 +1,8 @@
 # doing it here, bc then we have it for another time if needed
 import requests
+from flask import Flask
 from readability import Document
+import jsonify
 ''' df = open("tools/url-list.txt") 
 
 urls = df.read()'''
@@ -13,7 +15,7 @@ contentCombined = ""
 contentObj = {"intents": []}
 
 for url in urlsSplit:
-    response = requests.get('http://', url) #Http may better 
+    response = requests.get('http://', url) #Http may be better 
     #considering Ucanet is mostly used by Windows 95 computers that ain't using Https
     doc = Document(response.content)
     title = doc.title()
