@@ -15,12 +15,12 @@ contentCombined = ""
 contentObj = {"intents": []}
 
 for url in urlsSplit:
-    response = requests.get('http://', url) #Http may be better 
+    response = requests.get('http://' + url) #Http may be better 
     #considering Ucanet is mostly used by Windows 95 computers that ain't using Https
     doc = Document(response.content)
     title = doc.title()
     summary = doc.summary
-    contentTitles.appeend(title)
+    contentTitles.append(title)
     contentPages.append(summary)
     contentCombined += (title + " " + summary + ",\n")
     contentObj.append({
