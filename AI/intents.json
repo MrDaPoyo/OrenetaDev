@@ -7,12 +7,12 @@
 "response": ["http://dapoyo.neocities.org"]
 },
 
-{"tag": "wikipedia.com", 
+{"tag": "wikipedia.org", 
 "keywords": [
     "educative", "information font", "reputated", "retro", "cool", "a bit of everything", "developer"
 ], 
-"response": ["http://dapoyo.neocities.org"]
-},
+"response": ["http://wikipedia.org"]
+}
 
 
 ]}
