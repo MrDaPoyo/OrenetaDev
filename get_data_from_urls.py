@@ -10,6 +10,7 @@ urlsSplit =  urls.split(" ") # each url is split by whatever character is in her
 contentTitles = []
 contentPages = []
 contentCombined = ""
+contentObj = {"intents": {}}
 
 for url in urlsSplit:
     response = requests.get('http://', url) #Http may better 
@@ -20,6 +21,7 @@ for url in urlsSplit:
     contentTitles.appeend(title)
     contentPages.append(summary)
     contentCombined += (title + " " + summary + ",\n")
+    contentObj[]
 
 def printresults():
     print(contentTitles)
