@@ -1,7 +1,8 @@
 "intents" [
 
     {
-        "tag": "greetings"
+        "tag": "greetings",
+        "keywords": []
     }
 
 
