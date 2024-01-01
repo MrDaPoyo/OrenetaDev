@@ -1,9 +1,9 @@
-"intents" [
+{"intents": [
 
-    {
-        "tag": "greetings",
-        "keywords": []
-    }
+{"tag": "dapoyo.neocities.org", "keywords": [
+    "personal", "personal website", "retro", "no javascript", "cool"
+], 
+"response": ["http://dapoyo.neocities.org"]
+}
 
-
-]
+]}
