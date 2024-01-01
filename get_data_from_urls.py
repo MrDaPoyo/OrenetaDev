@@ -1,7 +1,7 @@
 # doing it here, bc then we have it for another time if needed
 import requests
 from flask import Flask
-from readability import Document
+from readability.readability import Document
 import jsonify
 ''' df = open("tools/url-list.txt") 
 
