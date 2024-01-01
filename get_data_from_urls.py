@@ -1,8 +1,8 @@
 # doing it here, bc then we have it for another time if needed
 import requests
-from flask import Flask
+from flask import Flask, jsonify
 from readability.readability import Document
-import jsonify
+
 '''df = open("tools/url-list.txt") 
 urls = df.read()'''
 
@@ -35,6 +35,6 @@ def printresults():
     print("--------Results--------")
     print(contentCombined)
     print(contentObj) # i'm gonna need this converted to JSON text
-    #what do you mean with ^?
+    #You may want to check Jsonify from flask
 
 printresults()
