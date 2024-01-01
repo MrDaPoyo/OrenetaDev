@@ -21,12 +21,17 @@ for url in urlsSplit:
     contentTitles.appeend(title)
     contentPages.append(summary)
     contentCombined += (title + " " + summary + ",\n")
-    contentObj.append()
+    contentObj.append({
+        "tag": url, 
+        "keywords": (title + " " + summary).split(" "), 
+        "response": ["http://"+url]
+    })
 
 def printresults():
     print(contentTitles)
     print(contentPages)
     print("--------Results--------")
     print(contentCombined)
+    print(contentObj) # i'm gonna need this converted to JSON text
 
 printresults()
