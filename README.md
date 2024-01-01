@@ -5,7 +5,5 @@ queries like if you were asking a real person. For example:
 ### ```Hey Oreneta, what's that retro ol' looking cool website where I can find plenty of information about history? ```
 > [wikipedia.com](https://wikipedia.com)
 
----Poyo---
-
 ### Being developed by @MrDaPoyo and @SilverSpace505
 
