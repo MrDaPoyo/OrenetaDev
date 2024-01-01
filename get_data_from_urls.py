@@ -21,7 +21,10 @@ for url in urlsSplit:
     contentPages.append(summary)
     contentCombined += (title + " " + summary + ",\n")
 
-print(contentTitles)
-print(contentPages)
-print("--------Results--------")
-print(contentCombined)
+def printresults():
+    print(contentTitles)
+    print(contentPages)
+    print("--------Results--------")
+    print(contentCombined)
+
+printresults()
