@@ -1,14 +1,14 @@
 # doing it here, bc then we have it for another time if needed
 import requests
 from readability import Document
+''' df = open("tools/url-list.txt") 
 
-df = open("tools/url-list.txt") 
-
-urls = df.read()
+urls = df.read()'''
 urlsSplit =  urls.split("\n")
 
 contentTitles = []
 contentPages = []
+contentCombined = ""
 
 for url in urls:
     response = requests.get('http://'+url) #Http may better 
@@ -16,6 +16,7 @@ for url in urls:
     doc = Document(response.content)
     contentTitles.appeend(doc.title())
     contentPages.append(doc.summary())
+    contentCombined += 
 
 print(contentTitles)
 print(contentPages)
