@@ -9,7 +9,7 @@ df = open("tools/url-list.txt")
 urls = df.read()
 '''
 
-urls = "wikipedia.com neal.fun dapoyo.neocities.org theoldnet.com 12thman.com"
+urls = "google.com youtube.com"
 urlsSplit =  urls.split(" ") # each url is split by whatever character is in here
 
 contentTitles = []
