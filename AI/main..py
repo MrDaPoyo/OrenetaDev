@@ -52,6 +52,7 @@ def get_response(intents_list, intents_json):
   
 print("Chatbot is up!") 
   
+### TODO: Replace this with the API ###
 while True: 
     message = input("") 
     ints = predict_class(message) 
