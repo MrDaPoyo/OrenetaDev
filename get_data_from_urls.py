@@ -39,6 +39,12 @@ def printresults():
     print("--------Results--------")
     print(contentCombined)
     print(contentObj) # I'm gonna need this converted to JSON text
-    #You may want to check Jsonify from flask > jsonify(contentObj) but we would need to setup a flask server
+    # print(json.dump(contentObj))
+
+def remove_html_tags(text):
+    """Remove html tags from a string"""
+    import re
+    clean = re.compile('<.*?>')
+    return re.sub(clean, '', text)
 
 printresults()
