@@ -5,7 +5,7 @@ import numpy as np
 import nltk 
 from keras.models import load_model 
 from nltk.stem import WordNetLemmatizer 
-from flask import Flask, requests, jsonify 
+from flask import Flask, request, jsonify 
   
 lemmatizer = WordNetLemmatizer() 
 intents = json.loads(open("AI/intents.json").read()) 
