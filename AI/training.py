@@ -8,7 +8,7 @@ import nltk
 from keras.models import Sequential 
 from nltk.stem import WordNetLemmatizer 
 from keras.layers import Dense, Activation, Dropout 
-from keras.optimizers import SGD 
+from keras.optimizers.legacy import SGD 
   
   
 lemmatizer = WordNetLemmatizer() 
@@ -62,7 +62,9 @@ for document in documents:
     output_row[classes.index(document[1])] = 1
     training.append([bag, output_row]) 
 random.shuffle(training) 
-training = np.array(training) 
+Data_type = object
+print(training) # see what it actually is lol
+training = np.array(training, dtype=Data_type)  #<- This should work
   
 # splitting the data 
 train_x = list(training[:, 0]) 
@@ -70,10 +72,10 @@ train_y = list(training[:, 1])
 
 # creating a Sequential machine learning model 
 model = Sequential() 
-model.add(Dense(128, input_shape=(len(train_x[0]), ), 
+model.add(Dense(256, input_shape=(len(train_x[0]), ), 
                 activation='relu')) 
 model.add(Dropout(0.5)) 
-model.add(Dense(64, activation='relu')) 
+model.add(Dense(128, activation='relu')) 
 model.add(Dropout(0.5)) 
 model.add(Dense(len(train_y[0]),  
                 activation='softmax')) 
