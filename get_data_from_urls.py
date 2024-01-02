@@ -2,6 +2,7 @@
 import requests
 from readability.readability import Document
 import json
+import re
 
 '''
 df = open("tools/url-list.txt") 
@@ -44,8 +45,7 @@ def printresults():
 
 def remove_html_tags(text):
     """Remove html tags from a string"""
-    import re
-    clean = re.compile('<.*?>',  )
+    clean = re.compile('<.*? \n>')
     return re.sub(clean, '', text)
 
 printresults()
