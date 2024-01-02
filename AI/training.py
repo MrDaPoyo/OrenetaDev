@@ -14,7 +14,7 @@ from keras.optimizers import SGD
 lemmatizer = WordNetLemmatizer() 
   
 # reading the json.intense file 
-intents = json.loads(open("intents.json").read()) 
+intents = json.loads(open("AI/intents.json").read()) 
   
 # creating empty lists to store data 
 words = [] 
@@ -22,7 +22,7 @@ classes = []
 documents = [] 
 ignore_letters = ["?", "!", ".", ","] 
 for intent in intents['intents']: 
-    for pattern in intent['patterns']: 
+    for pattern in intent['keywords']: 
         # separating words from patterns 
         word_list = nltk.word_tokenize(pattern) 
         words.extend(word_list)  # and adding them to words list 
