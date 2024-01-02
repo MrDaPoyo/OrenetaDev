@@ -1,0 +1,34 @@
+{
+    "intents": [
+        {
+            "tag": "dapoyo.neocities.org",
+            "keywords": [
+                "personal",
+                "personal website",
+                "retro",
+                "no javascript",
+                "cool",
+                "old vibes",
+                "developer"
+            ],
+            "response": [
+                "http://dapoyo.neocities.org"
+            ]
+        },
+        {
+            "tag": "wikipedia.org",
+            "keywords": [
+                "educative",
+                "information font",
+                "reputated",
+                "retro",
+                "cool",
+                "a bit of everything",
+                "developer"
+            ],
+            "response": [
+                "http://wikipedia.org"
+            ]
+        }
+    ]
+}
