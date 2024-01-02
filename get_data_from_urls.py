@@ -38,7 +38,8 @@ def printresults():
     print(contentPages)
     print("--------Results--------")
     print(contentCombined)
-    print(contentObj) # I'm gonna need this converted to JSON text
+    formattedcontent = remove_html_tags(str(contentObj))
+    print(formattedcontent) # I'm gonna need this converted to JSON text
     # print(json.dump(contentObj))
 
 def remove_html_tags(text):
