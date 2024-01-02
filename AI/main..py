@@ -53,9 +53,21 @@ def get_response(intents_list, intents_json):
   
 print("Chatbot is up!") 
   
-### TODO: Replace this with the API ###
+''' TODO: Replace this with the API 
 while True: 
     message = input("") 
     ints = predict_class(message) 
     res = get_response(ints, intents) 
-    print(res) 
+    print(res) '''
+
+app = Flask(__name__)
+
+@app.route("/search<user_id>")
+def query(user_id):
+    message = input(user_id) 
+    ints = predict_class(message) 
+    res = get_response(ints, intents) 
+    return jsonify(res), 200
+
+if __name__ == "__main__":
+    app.run(debug=True)
