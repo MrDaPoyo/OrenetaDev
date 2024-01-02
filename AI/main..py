@@ -5,6 +5,7 @@ import numpy as np
 import nltk 
 from keras.models import load_model 
 from nltk.stem import WordNetLemmatizer 
+from flask import Flask, requests, jsonify 
   
 lemmatizer = WordNetLemmatizer() 
 intents = json.loads(open("AI/intents.json").read()) 
@@ -46,7 +47,7 @@ def get_response(intents_list, intents_json):
     result = "" 
     for i in list_of_intents: 
         if i['tag'] == tag: 
-            result = random.choice(i['responses']) 
+            result = random.choice(i['response']) 
             break
     return result 
   
