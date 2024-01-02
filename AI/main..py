@@ -50,7 +50,7 @@ def predict_class(sentence):
                             'probability': str(r[1])}) 
         return return_list 
 
-# Matches prediction with each tag in intens.json
+# Matches prediction with each tag in intense.json
 
 def get_response(intents_list, intents_json): 
     tag = intents_list[0]['intent'] 
