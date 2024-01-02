@@ -62,9 +62,9 @@ while True:
 
 app = Flask(__name__)
 
-@app.route("/search<user_id>")
+@app.route("/search/<user-id>")
 def query(user_id):
-    message = input(user_id) 
+    message = user_id
     ints = predict_class(message) 
     res = get_response(ints, intents) 
     return jsonify(res), 200
