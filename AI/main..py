@@ -62,7 +62,7 @@ while True:
 
 app = Flask(__name__)
 
-@app.route("/search/<user-id>")
+@app.route("/search-<user_id>")
 def query(user_id):
     message = user_id
     ints = predict_class(message) 
