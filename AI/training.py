@@ -40,8 +40,8 @@ words = [lemmatizer.lemmatize(word)
 words = sorted(set(words)) 
   
 # saving the words and classes list to binary files 
-pickle.dump(words, open('words.pkl', 'wb')) 
-pickle.dump(classes, open('classes.pkl', 'wb')) 
+pickle.dump(words, open('AI/words.pkl', 'wb')) 
+pickle.dump(classes, open('AI/classes.pkl', 'wb')) 
 
 
 # we need numerical values of the 
@@ -88,7 +88,7 @@ hist = model.fit(np.array(train_x), np.array(train_y),
                  epochs=200, batch_size=5, verbose=1) 
   
 # saving the model 
-model.save("chatbotmodel.h5", hist) 
+model.save("AI/chatbotmodel.h5", hist) 
   
 # print statement to show the  
 # successful training of the Chatbot model 
