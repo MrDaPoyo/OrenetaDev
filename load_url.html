@@ -1,0 +1,26 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Getting stuff ready!</title>
+</head>
+
+<body>
+    <script onerror="alert('Oopsie')">
+
+        const Http = new XMLHttpRequest()
+        const url = window.location.href // <- Grabs the current url in the browser, and checks for responses
+        Http.open("GET", url)
+
+        Http.onreadystatechange = (e) => {
+            // Http.responseText is the json object with the url from the server
+            let urlObj = JSON.parse(Http.responseText) // <- Parsing the json and converting it to a object (dictionary)
+            window.location.href = urlObj.url // Idk what property contains the url
+            console.log(Http.responseText) // Prints in the console.log the http response from the server?; yep
+        }
+
+    </script> <!-- Silver's amazing work up there -->
+</body>
+</html>

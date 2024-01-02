@@ -25,7 +25,7 @@ def clean_up_sentences(sentence):
                       for word in sentence_words] 
     return sentence_words 
 
-
+# transforms the input into an array so the AI can understand stupid-user#1's input 
 def bagw(sentence): 
     sentence_words = clean_up_sentences(sentence) 
     bag = [0]*len(words) 
@@ -34,7 +34,9 @@ def bagw(sentence):
             if word == w: 
                 bag[i] = 1
     return np.array(bag) 
-  
+
+#Given the array, it generates a prediction
+
 def predict_class(sentence): 
     bow = bagw(sentence) 
     res = model.predict(np.array([bow]))[0] 
@@ -47,7 +49,9 @@ def predict_class(sentence):
         return_list.append({'intent': classes[r[0]], 
                             'probability': str(r[1])}) 
         return return_list 
-  
+
+# Matches prediction with each tag in intens.json
+
 def get_response(intents_list, intents_json): 
     tag = intents_list[0]['intent'] 
     list_of_intents = intents_json['intents'] 
