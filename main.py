@@ -49,6 +49,7 @@ def predict_class(sentence):
     for r in results: 
         return_list.append({'intent': classes[r[0]], 
                             'probability': str(r[1])}) 
+        print(return_list)
         return return_list 
 
 # Matches prediction with each tag in intense.json
@@ -68,11 +69,11 @@ def get_response(intents_list, intents_json):
 print("Chatbot is up!")
   
 # Running the chatbot
-''' while True: 
+while True: 
     message = input("") 
     ints = predict_class(message) 
     res = get_response(ints, intents) 
-    print(res) '''
+    print(res)
 
 #setting up the Flask server
 
