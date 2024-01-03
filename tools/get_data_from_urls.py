@@ -10,7 +10,7 @@ df = open("tools/url-list.txt")
 urls = df.read()
 '''
 
-urls = "google.com youtube.com facebook.com baidu.com wikipedia.org amazon.com qq.com reddit.com taobao.com yahoo.com twitter.com instagram.com imdb.com stackexchange.com nasa.gov espn.com nba.com weather.com nintendo.com steamcommunity.com xfinity.com walmart.com homedepot.com target.com chase.com bankofamerica.com Fargo.com stanford.edu columbia.edu berkeley.edu dapoyo.neocities.org accuweather.com pandora.com last.fm"
+urls = "google.com youtube.com facebook.com"
 urlsSplit =  urls.split(" ") # each url is split by whatever character is in here
 
 contentTitles = []
@@ -45,14 +45,21 @@ def printresults():
     print(contentPages)
     print("--------Results--------")
     print(contentCombined)
-    formattedcontent = remove_html_tags(str(contentObj))
+    formattedcontent = remove_html_tags(contentObj)
+    formattedcontent = remove_empty_tags(formattedcontent)
     print(formattedcontent) # I'm gonna need this converted to JSON text
     with open('AI/intents.json', 'w', encoding ='utf8') as json_file: 
         json.dump(formattedcontent, json_file, ensure_ascii = False)
 
 def remove_html_tags(text):
     """Remove html tags from a string"""
-    clean = re.compile('<.*?>')
-    return re.sub(clean, '', text)
+    for i in text:
+        clean = re.compile('<.*?>')
+        return re.sub(clean, '', text)
+
+def remove_empty_tags(test_list):
+    """Remove empty tags from a string"""
+    while("" in test_list):
+        test_list.remove("")
 
 printresults()
