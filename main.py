@@ -77,12 +77,12 @@ app = Flask(__name__)
 
 # If the user goes to /search-avocadoes, the server will use "avocadoes" as input
 
-@app.route("/search#<user_id>")
+@app.route("/search<user_id>")
 def query(user_id):
     message = user_id
     ints = predict_class(message) 
     res = get_response(ints, intents) 
-    return res, 200
+    return res
 
 
 @app.route("/")
