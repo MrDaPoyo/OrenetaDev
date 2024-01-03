@@ -14,7 +14,7 @@ def get_user(user_id):
 
 @app.route("/")
 def returnindex():
-    return render_template('frontend/index.html')
+    return render_template('index.html')
     
 
 if __name__ == "__main__":
