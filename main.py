@@ -66,15 +66,15 @@ def get_response(intents_list, intents_json):
             break
     return result 
   
-print("Chatbot is up!")
+print("Oreneta is online!")
   
 # Running the chatbot
-while True: 
+'''while True: 
     message = input("") 
     ints = predict_class(message) 
     res = get_response(ints, intents) 
     print(res)
-
+'''
 #setting up the Flask server
 
 app = Flask(__name__)
