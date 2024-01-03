@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Oreneta Browser</title>
-  <link ... href="{{ url_for('templates', filename='/style.css') }}" />
 </head>
 
 <body>
@@ -32,6 +31,70 @@
       // done; Great!
     }
   </script>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap");
+
+body {
+  overflow: hidden;
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+#logo {
+  height: 200px;
+  margin: -45px;
+  padding: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: auto;
+  width: 100%;
+  height: 90vh;
+}
+#container {
+  z-index: 1;
+  width: 500px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+}
+footer {
+  height: 10vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#random {
+  margin: 10px;
+}
+
+footer p, footer a {
+  margin: auto;
+}
+
+#field {
+  width: 50%;
+}
+
+#submit {
+  width: auto;
+}
+
+input {
+  font-family: "pixelify sans", sans-serif;
+  font-size: 0.6em;
+}
+
+  </style>
 </body>
 
 </html>
