@@ -1,4 +1,4 @@
-# doing it here, because then we'll have it for another time if needed
+# doing it here, because then we'll have it for another time if needed; Trying to re-build intents.json
 import requests
 from readability.readability import Document
 import json
@@ -47,7 +47,7 @@ def printresults():
     print(contentCombined)
     formattedcontent = remove_html_tags(str(contentObj))
     print(formattedcontent) # I'm gonna need this converted to JSON text
-    with open('intents.json', 'w', encoding ='utf8') as json_file: 
+    with open('AI/intents.json', 'w', encoding ='utf8') as json_file: 
         json.dump(formattedcontent, json_file, ensure_ascii = False)
 
 def remove_html_tags(text):
