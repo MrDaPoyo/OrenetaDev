@@ -82,7 +82,7 @@ def query(user_id):
     message = user_id
     ints = predict_class(message) 
     res = get_response(ints, intents) 
-    return jsonify(res), 200
+    return res, 200
 
 
 @app.route("/")
