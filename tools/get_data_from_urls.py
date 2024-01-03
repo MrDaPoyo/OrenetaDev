@@ -17,8 +17,8 @@ contentTitles = []
 contentPages = []
 contentCombined = ""
 contentObj = {"intents": []}
-
-
+# this is a dictionary.
+ 
 
 for url in urlsSplit:
     start_time = time.time()
@@ -45,21 +45,21 @@ def printresults():
     print(contentPages)
     print("--------Results--------")
     print(contentCombined)
-    formattedcontent = remove_html_tags(contentObj)
-    formattedcontent = remove_empty_tags(formattedcontent)
+    formattedcontent = remove_html_tags(contentObj) # error: TypeError: expected string or bytes-like object
     print(formattedcontent) # I'm gonna need this converted to JSON text
     with open('AI/intents.json', 'w', encoding ='utf8') as json_file: 
         json.dump(formattedcontent, json_file, ensure_ascii = False)
 
 def remove_html_tags(text):
-    """Remove html tags from a string"""
-    for i in text:
-        clean = re.compile('<.*?>')
-        return re.sub(clean, '', text)
+    """ Remove html tags from a string. """
+    #clean = re.compile('<.*?$%€#"->') # But your script outputs like every single character, not each keyword
+    # do we want duplicate tags?; Idk maybe to relate pages by how many times they're mentioned
+    clean = re.compile('<.*?>')
+    #What's a regex issue?; Done, it outputs each character, not keyword
+    # no, this is just a regex issue. try running it.
+    #clean.remove("")
+    return [x for x in re.sub(clean, '', text) if x != '' ]# 
+    clean.remove("")
 
-def remove_empty_tags(test_list):
-    """Remove empty tags from a string"""
-    while("" in test_list):
-        test_list.remove("")
 
 printresults()
