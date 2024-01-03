@@ -6,6 +6,7 @@ import nltk
 from keras.models import load_model 
 from nltk.stem import WordNetLemmatizer 
 from flask import Flask, request, jsonify, render_template
+import random
  
 # Importing all the libraries we do need ^
 # Loading and setting up stuff 
@@ -51,21 +52,23 @@ def predict_class(sentence):
         return return_list 
 
 # Matches prediction with each tag in intense.json
-
+# and returns a random response from the list of responses
 def get_response(intents_list, intents_json): 
     tag = intents_list[0]['intent'] 
     list_of_intents = intents_json['intents'] 
     result = "" 
     for i in list_of_intents: 
         if i['tag'] == tag: 
-            result = random.choice(i['response']) 
+            
+              # prints a random response 
+            result = random.choice(i['response'])   
             break
     return result 
   
 print("Chatbot is up!")
   
-''' TODO: Replace this with the API 
-while True: 
+# Running the chatbot
+''' while True: 
     message = input("") 
     ints = predict_class(message) 
     res = get_response(ints, intents) 
