@@ -7,7 +7,7 @@ queries like if you were asking a real person. For example:
 
 ## How to use it
 
-Just grab the url-list.txt file and input all the files you want, then execute traning.py and then main.py!
+Just grab the url-list.txt file and input all the url you want, separated by lines, then execute traning.py and finally main.py!
 
 ### Being developed by @MrDaPoyo and @SilverSpace505
 
