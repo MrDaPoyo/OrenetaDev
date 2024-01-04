@@ -45,14 +45,15 @@ def printresults():
     print(contentPages)
     print("--------Results--------")
     print(contentCombined)
-    formattedcontent = remove_html_tags(contentObj)
+    formattedcontent = remove_html_tags(str(contentObj))
     print(formattedcontent) # I'm gonna need this converted to JSON text
     with open('AI/intents.json', 'w', encoding ='utf8') as json_file: 
         json.dump(formattedcontent, json_file, ensure_ascii = False)
 
 def remove_html_tags(text):
     """Remove html tags from a string"""
-    clean = re.compile('<.*?&%>')
+    clean = re.compile('<.*?>')
     return re.sub(clean, '', text)
+
 
 printresults()
