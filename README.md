@@ -1,3 +1,4 @@
+[Outdated, Oreneta's going to be reweritten from scratch]
 # Oreneta Browser
 > Oreneta is a small, fast browser that works inside the Ucanet network.
 > It implements an AI exclusively created to provide the best results with natural 
